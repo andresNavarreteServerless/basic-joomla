@@ -5,7 +5,7 @@ services:
     image: joomla
     restart: always
     links:
-      - joomladb:mysql
+      - joomladb
     ports:
       - 8080:80
     environment:
@@ -21,6 +21,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: example
     ports:
-      - 3306:3306
+      - "3306:3306" 
     volumes:
       - ./data:/var/lib/mysql
